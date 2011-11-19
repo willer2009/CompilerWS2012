@@ -1,0 +1,5 @@
+ff	a	1111
+print
+(
+#
+ddd
