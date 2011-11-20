@@ -1,8 +1,7 @@
-Automat/Automat.d Automat/Automat.o: ../Automat/Automat.cpp \
- ../Automat/Automat.h ../Automat/../GlobalTypes/Setup.h \
- ../Automat/../GlobalTypes/Token.h ../Automat/../GlobalTypes/TokenType.h \
- ../Automat/../GlobalTypes/Setup.h ../Automat/../IOBuffer/IOBuffer.h \
- ../Automat/../IOBuffer/DBuffIHandler.h \
+Automat/Automat.d: ../Automat/Automat.cpp ../Automat/Automat.h \
+ ../Automat/../GlobalTypes/Setup.h ../Automat/../GlobalTypes/Token.h \
+ ../Automat/../GlobalTypes/TokenType.h ../Automat/../GlobalTypes/Setup.h \
+ ../Automat/../IOBuffer/IOBuffer.h ../Automat/../IOBuffer/DBuffIHandler.h \
  ../Automat/../IOBuffer/BufferedIHandler.h \
  ../Automat/../IOBuffer/IHandler.h ../Automat/../IOBuffer/IBlock.h \
  ../Automat/../IOBuffer/Reader.h ../Automat/../IOBuffer/Block.h \

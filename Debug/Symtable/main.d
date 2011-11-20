@@ -1,1 +1,1 @@
-Symtable/main.d Symtable/main.o: ../Symtable/main.cpp
+Symtable/main.d: ../Symtable/main.cpp

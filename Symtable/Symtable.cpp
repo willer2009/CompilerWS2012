@@ -6,6 +6,8 @@
  */
 
 #include "Symtable.h"
+#include <iostream>
+#include <stdio.h>
 
 Symtable::Symtable() {
 	// TODO Auto-generated constructor stub
@@ -41,6 +43,11 @@ int Symtable::insert(char *lexem, TokenType::TokenType type)
 		char* newLexem = this->stringTab.insert(lexem, length);
 		el = new ListElement(new SymtabEntry(Information(newLexem, type)));
 		this->hashtable[pos]->addElement(el);
+		//printf("insert: %s\n", lexem);
+		//std::cout << "insert: "+ lexem;
+	}else{
+		//printf("already there: %s\n", lexem);
+		//std::cout << "already there: "+ lexem;
 	}
 	return pos;
 }
@@ -58,42 +65,45 @@ Information Symtable::lookup(const char* lexem)
 		ListElement* tmp = this->hashtable[pos]->getFirst();
 		while(tmp->getNextElement() != 0){
 			if(HelpClass::compare(tmp->getElement()->getInfo().getLexem(), lexem)){
+				//printf("string found: %s\n", lexem);
 				return tmp->getElement()->getInfo();
+
 				}
 			tmp = tmp->getNextElement();
 		}
 
 		//das letzte Element auch testen, weil die While-Schleife überprüft es nicht
 		if(HelpClass::compare(tmp->getElement()->getInfo().getLexem(), lexem)){
+			//printf("string found: %s\n", lexem);
 			return tmp->getElement()->getInfo();
 		}
 	}
+	//printf("string not found: %s\n", lexem);
 	Information inf;
 	return inf;
 }
 
 void Symtable::initSymbols(){
-//	this->insert("print", TokenType::PRINT);
-//	this->insert("read", TokenType::READ);
-//	this->insert("int", TokenType::INT);
-//	this->insert("+", TokenType::PLUS);
-//	this->insert(";", TokenType::SEMICOLON);
-//	this->insert("/", TokenType::SLASH);
-//	this->insert("*", TokenType::SIGN_MULTI);
-//	this->insert("-", TokenType::SIGN_MINUS);
-//	this->insert("=", TokenType::SIGN_EQUAL);
-//	this->insert("!", TokenType::SIGN_EXCLAMATION);
-//	this->insert("<", TokenType::SIGN_INFERIOR);
-//	this->insert("{", TokenType::SIGN_LEFT_BRACE);
-//	this->insert("(", TokenType::SIGN_LEFT_PARENTHESIS);
-//	this->insert("[", TokenType::SIGN_LEFT_SQUAREBRACE);
-//	this->insert("}", TokenType::SIGN_RIGHT_BRACE);
-//	this->insert(")", TokenType::SIGN_RIGHT_PARENTHESIS);
-//	this->insert("]", TokenType::SIGN_RIGHT_SQUAREBRACE);
-//	this->insert("&", TokenType::SIGN_UND);
-//	this->insert("<", TokenType::SIGN_INFERIOR);
-//	this->insert(">", TokenType::SIGN_SUPERIOR);
-//	this->insert("<=>", TokenType::SIGN_UNEQUAL);
+	this->insert("print", TokenType::PRINT);
+	this->insert("read", TokenType::READ);
+	this->insert("int", TokenType::INT);
+	this->insert("+", TokenType::PLUS);
+	this->insert(";", TokenType::SEMICOLON);
+	this->insert("/", TokenType::SLASH);
+	this->insert("*", TokenType::ASTERISK);
+	this->insert("-", TokenType::MINUS);
+	this->insert("=", TokenType::EQUALS);
+	this->insert("!", TokenType::EXCLAMATIONMARK);
+	this->insert("{", TokenType::L_BRACE);
+	this->insert("(", TokenType::L_PARENTHESIS);
+	this->insert("[", TokenType::L_SQUAREBRACE);
+	this->insert("}", TokenType::R_BRACE);
+	this->insert(")", TokenType::R_PARENTHESIS);
+	this->insert("]", TokenType::R_SQUAREBRACE);
+	this->insert("&", TokenType::AMPERSAND);
+	this->insert("<", TokenType::L_BRACKET);
+	this->insert(">", TokenType::R_BRACKET);
+	this->insert("<=>", TokenType::UNEQUAL);
 
 }
 

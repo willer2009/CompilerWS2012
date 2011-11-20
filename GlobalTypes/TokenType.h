@@ -37,9 +37,6 @@ namespace TokenType {
 		PRINT,				// PRINT
 		READ,				// READ
 		OUTOFRANGE,			// OOR
-		IF,					// IF
-		ELSE,				// ELSE
-		WHILE,				// WHILE
 		INT					// INT
 	};
 }

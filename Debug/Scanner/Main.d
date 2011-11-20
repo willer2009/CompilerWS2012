@@ -1,4 +1,4 @@
-Scanner/Main.d Scanner/Main.o: ../Scanner/Main.cpp ../Scanner/Scanner.h \
+Scanner/Main.d: ../Scanner/Main.cpp ../Scanner/Scanner.h \
  ../Scanner/../Automat/Automat.h \
  ../Scanner/../Automat/../GlobalTypes/Setup.h \
  ../Scanner/../Automat/../GlobalTypes/Token.h \

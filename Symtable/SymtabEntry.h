@@ -10,9 +10,14 @@
 
 #include "Information.h"
 #include "../GlobalTypes/TokenType.h"
-
+/**
+ * this class only contains the information on a lexem
+ */
 class SymtabEntry {
 private:
+	/**
+	 * information about a lexem
+	 */
 	Information info;
 public:
 	SymtabEntry(Information info);

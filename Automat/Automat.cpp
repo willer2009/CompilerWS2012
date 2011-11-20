@@ -167,12 +167,12 @@ Token* Automat::searchLexem() {
 						token.setTokenType(TokenType::PRINT);
 					} else if (Helper::compareCaseInsensitive(this->lexem, "read")) {
 						token.setTokenType(TokenType::READ);
-					} else if (Helper::compareCaseInsensitive(this->lexem, "if")) {
-						token.setTokenType(TokenType::IF);
-					} else if (Helper::compareCaseInsensitive(this->lexem, "else")) {
-						token.setTokenType(TokenType::ELSE);
-					} else if (Helper::compareCaseInsensitive(this->lexem, "while")) {
-						token.setTokenType(TokenType::WHILE);
+//					} else if (Helper::compareCaseInsensitive(this->lexem, "if")) {
+//						token.setTokenType(TokenType::IF);
+//					} else if (Helper::compareCaseInsensitive(this->lexem, "else")) {
+//						token.setTokenType(TokenType::ELSE);
+//					} else if (Helper::compareCaseInsensitive(this->lexem, "while")) {
+//						token.setTokenType(TokenType::WHILE);
 					} else if (Helper::compareCaseInsensitive(this->lexem, "int")) {
 						token.setTokenType(TokenType::INT);
 					} else {

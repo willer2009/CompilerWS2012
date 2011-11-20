@@ -1,5 +1,5 @@
-Scanner/Scanner.d Scanner/Scanner.o: ../Scanner/Scanner.cpp \
- ../Scanner/Scanner.h ../Scanner/../Automat/Automat.h \
+Scanner/Scanner.d: ../Scanner/Scanner.cpp ../Scanner/Scanner.h \
+ ../Scanner/../Automat/Automat.h \
  ../Scanner/../Automat/../GlobalTypes/Setup.h \
  ../Scanner/../Automat/../GlobalTypes/Token.h \
  ../Scanner/../Automat/../GlobalTypes/TokenType.h \

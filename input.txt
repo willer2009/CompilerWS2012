@@ -1,5 +1,8 @@
 ff	a	1111
 print
 (
-#
 ddd
+int
+read
+voila
+kfglfgdjkfgdfgkjndsfgldfngdflkgndfgndlfgdlfgldfgdfghgfnhfhfghfmlfgkhfmgkhfnghbgfffgfghfghgff2131321

@@ -14,9 +14,16 @@
 
 class ISymtable{
 public:
-	//virtual int insert(char* lexem, TokenType::TokenType type) = 0;
+	/**
+	 * insert a lexem with his type in the hashtable
+	 */
 	virtual int insert(char* lexem, TokenType::TokenType type) = 0;
-	virtual Information lookup(const ListElement *listEl) = 0;
+
+	/**
+	 * search the information about a given lexem in the hashtable
+	 */
+	virtual Information lookup(const char* lexem) = 0;
+
 	virtual ~ISymtable(){}
 };
 

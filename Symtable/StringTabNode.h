@@ -10,10 +10,18 @@
 
 #include "HelpClass.h"
 #include "StringTabNode.h"
-
+/**
+ * this class represent a node where 65536 character can be stored
+ */
 class StringTabNode {
 private:
+	/**
+	 * array which contains the stored characters
+	 */
     char vector[CHAR_NUMBER];
+    /**
+     * pointer on the next node
+     */
     StringTabNode *next;
 public:
     StringTabNode();

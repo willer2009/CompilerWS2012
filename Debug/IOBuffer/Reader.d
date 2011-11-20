@@ -1,4 +1,3 @@
-IOBuffer/Reader.d IOBuffer/Reader.o: ../IOBuffer/Reader.cpp \
- ../IOBuffer/Reader.h
+IOBuffer/Reader.d: ../IOBuffer/Reader.cpp ../IOBuffer/Reader.h
 
 ../IOBuffer/Reader.h:

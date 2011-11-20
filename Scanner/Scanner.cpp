@@ -46,8 +46,10 @@ void Scanner::start()
 							t->getLexem());
 			table->insert(t->getLexem(), t->getTokenType());
 		}
+
 	}
 	while( t != 0);
+
 
 }
 
@@ -101,12 +103,12 @@ char* Scanner::tokenTypeToString(TokenType::TokenType token){
 			return "Read";
 		case TokenType::OUTOFRANGE:
 			return "OutOfRange";
-		case TokenType::IF:
-			return "If";
-		case TokenType::ELSE:
-			return "Else";
-		case TokenType::WHILE:
-			return "While";
+//		case TokenType::IF:
+//			return "If";
+//		case TokenType::ELSE:
+//			return "Else";
+//		case TokenType::WHILE:
+//			return "While";
 		case TokenType::INT:
 			return "Int";
 		default:

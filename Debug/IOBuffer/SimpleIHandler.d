@@ -1,6 +1,5 @@
-IOBuffer/SimpleIHandler.d IOBuffer/SimpleIHandler.o: \
- ../IOBuffer/SimpleIHandler.cpp ../IOBuffer/Reader.h \
- ../IOBuffer/SimpleIHandler.h ../IOBuffer/IHandler.h
+IOBuffer/SimpleIHandler.d: ../IOBuffer/SimpleIHandler.cpp \
+ ../IOBuffer/Reader.h ../IOBuffer/SimpleIHandler.h ../IOBuffer/IHandler.h
 
 ../IOBuffer/Reader.h:
 

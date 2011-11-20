@@ -8,12 +8,12 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include subdir.mk
 -include Symtable/subdir.mk
 -include Scanner/subdir.mk
 -include IOBuffer/subdir.mk
 -include GlobalTypes/subdir.mk
 -include Automat/subdir.mk
+-include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -48,7 +48,7 @@ all: complier
 complier: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o"complier" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "complier" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
